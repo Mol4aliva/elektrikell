@@ -13,7 +13,7 @@ function App() {
     <Container>
       <Head activePrice = {activePrice} setActivePrice={setActivePrice}/>
       <Body/>
-      <Footer/>
+      <Footer activePrice = {activePrice} setActivePrice={setActivePrice}/>
     </Container>
   );
 }

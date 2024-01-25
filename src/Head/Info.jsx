@@ -3,11 +3,13 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { PRICE_BUTTONS } from "./constants";
 
+
 function Info({ activePrice, setActivePrice }) {
+
     return(
         <>
             <Col></Col>
-            <Col>
+            <Col className="d-flex justify-content-center">
                 <ButtonGroup>
                     {PRICE_BUTTONS.map(({ name, id}) => (
                     <Button
@@ -20,6 +22,7 @@ function Info({ activePrice, setActivePrice }) {
                     </Button>
                     ))}
                 </ButtonGroup>
+
             </Col>
             <Col></Col>
         </>
