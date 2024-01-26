@@ -1,15 +1,19 @@
 import Col from 'react-bootstrap/Col';
+import Row from "react-bootstrap/Row";
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import { PRICE_BUTTONS } from "./constants";
-
+import { PRICE_BUTTONS, BADGES } from "./constants";
+import Badge from 'react-bootstrap/Badge';
 
 function Info({ activePrice, setActivePrice }) {
 
     return(
-        <>
-            <Col></Col>
-            <Col className="d-flex justify-content-center">
+        <Row>
+            <Col>
+                <div>The current price of electricity is</div>
+                <Badge bg={BADGES[0].name}>{BADGES[0].id}</Badge>
+            </Col>
+            <Col>
                 <ButtonGroup>
                     {PRICE_BUTTONS.map(({ name, id}) => (
                     <Button
@@ -24,8 +28,11 @@ function Info({ activePrice, setActivePrice }) {
                 </ButtonGroup>
 
             </Col>
-            <Col></Col>
-        </>
+            <Col>
+                <h2>XX.XX</h2>
+                <div>cent / kilowatt-hour</div>
+            </Col>
+        </Row>
     );
 }
 export default Info;

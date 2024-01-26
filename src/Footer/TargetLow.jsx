@@ -1,7 +1,8 @@
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-function TargetLow() {
+import Intervals from "./Intervals";
+function TargetLow(props) {
 
     return (
         <>
@@ -14,7 +15,9 @@ function TargetLow() {
                 </Col>
             </Row>
             <Row>
-                <Col></Col>
+                <Col>
+                    <Intervals {...props}/>
+                </Col>
             </Row>
             <Row>
                 <Col></Col>

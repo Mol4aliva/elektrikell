@@ -7,7 +7,7 @@ function Head(props) {
             <Row>
                 <Logo/>
             </Row>
-            <Row>
+            <Row >
                 <Info {...props}/>
             </Row>
         </>
