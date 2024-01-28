@@ -7,15 +7,13 @@ function TargetLow(props) {
     return (
         <>
             <Row className="justify-content-md-center">
-                <Col xs lg="2">
-                    <p>I want to consume</p>
-                </Col>
-                <Col md="auto">
-                    <Button variant="secondary">before morning</Button>
+                <Col  xs={12} md={8} className="d-flex justify-content-center mb-3 mt-3">
+                    <p >I want to consume</p>
+                    <Button variant="secondary" className="ms-2 ">before morning</Button>
                 </Col>
             </Row>
             <Row>
-                <Col>
+                <Col className="mb-3">
                     <Intervals {...props}/>
                 </Col>
             </Row>
