@@ -4,8 +4,24 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { PRICE_BUTTONS, BADGES } from "./constants";
 import Badge from 'react-bootstrap/Badge';
+import { getPriceCurrent } from "../services/apiServicePrice";
+import {useEffect, useState} from "react";
+import { chartTopPrice } from "../utils";
 
 function Info({ activePrice, setActivePrice }) {
+    const [priceCurrent, setPriceCurrent] = useState(null);
+
+
+    useEffect(() => {
+        getPriceCurrent()
+            .then(({ data }) => {
+                const processedData = chartTopPrice(data);
+                setPriceCurrent(processedData[0].price);
+            })
+            .catch(error => {
+                console.error("Error price:", error);
+            });
+    }, []);
 
     return(
         <Row>
@@ -29,7 +45,7 @@ function Info({ activePrice, setActivePrice }) {
 
             </Col>
             <Col className="text-end">
-                <h2>XX.XX</h2>
+                <h2>{priceCurrent}</h2>
                 <div>cent / kilowatt-hour</div>
             </Col>
         </Row>
