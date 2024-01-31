@@ -12,3 +12,11 @@ export const getPriceData = async () => {
 
     return await response.json();
 };
+
+export const getCurrentPrice = async () => {
+    const countryCode = 'EE';
+
+    const response = await fetch( `${apiUrl}/nps/price/${countryCode}/current`);
+
+    return await response.json();
+};

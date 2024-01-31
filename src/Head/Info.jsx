@@ -4,23 +4,20 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { PRICE_BUTTONS, BADGES } from "./constants";
 import Badge from 'react-bootstrap/Badge';
-import { getPriceCurrent } from "../services/apiServicePrice";
+import { getCurrentPrice } from "../services/apiService";
 import {useEffect, useState} from "react";
-import { chartTopPrice } from "../utils";
+import { mwToKw, addTax } from "../utils/priceFormats";
+
 
 function Info({ activePrice, setActivePrice }) {
-    const [priceCurrent, setPriceCurrent] = useState(null);
+const [ currentPrice, setCurrentPrice] = useState(0);
 
 
     useEffect(() => {
-        getPriceCurrent()
-            .then(({ data }) => {
-                const processedData = chartTopPrice(data);
-                setPriceCurrent(processedData[0].price);
-            })
-            .catch(error => {
-                console.error("Error price:", error);
-            });
+        (async () => {
+            const  { data } = await getCurrentPrice();
+            setCurrentPrice(addTax(mwToKw(data[0].price), "ee"));
+        })()
     }, []);
 
     return(
@@ -45,7 +42,7 @@ function Info({ activePrice, setActivePrice }) {
 
             </Col>
             <Col className="text-end">
-                <h2>{priceCurrent}</h2>
+                <h2>{currentPrice}</h2>
                 <div>cent / kilowatt-hour</div>
             </Col>
         </Row>
