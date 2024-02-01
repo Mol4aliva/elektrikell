@@ -6,23 +6,23 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Badge from 'react-bootstrap/Badge';
 
-import { PRICE_BUTTONS, BADGES } from "./constants";
-import { getCurrentPrice } from "../services/apiService";
-import { mwToKw, addTax } from "../utils/priceFormats";
+import {PRICE_BUTTONS, BADGES} from "./constants";
+import {getCurrentPrice} from "../services/apiService";
+import {mwToKw, addTax} from "../utils/priceFormats";
 
 
-function Info({ activePrice, setActivePrice }) {
-const [currentPrice, setCurrentPrice] = useState(0);
+function Info({activePrice, setActivePrice}) {
+    const [currentPrice, setCurrentPrice] = useState(0);
 
 
     useEffect(() => {
         (async () => {
-            const { data } = await getCurrentPrice();
+            const {data} = await getCurrentPrice();
             setCurrentPrice(addTax(mwToKw(data[0].price), "EE"));
         })();
     }, []);
 
-    return(
+    return (
         <Row>
             <Col>
                 <div>The current price of electricity is</div>
@@ -30,15 +30,15 @@ const [currentPrice, setCurrentPrice] = useState(0);
             </Col>
             <Col className="text-center">
                 <ButtonGroup>
-                    {PRICE_BUTTONS.map(({ name, id}) => (
-                    <Button
-                        key={id}
-                        active={activePrice === id}
-                        onClick={() => setActivePrice(id)}
-                        variant="secondary"
-                    >
-                        {name}
-                    </Button>
+                    {PRICE_BUTTONS.map(({name, id}) => (
+                        <Button
+                            key={id}
+                            active={activePrice === id}
+                            onClick={() => setActivePrice(id)}
+                            variant="secondary"
+                        >
+                            {name}
+                        </Button>
                     ))}
                 </ButtonGroup>
 
@@ -50,4 +50,5 @@ const [currentPrice, setCurrentPrice] = useState(0);
         </Row>
     );
 }
+
 export default Info;
