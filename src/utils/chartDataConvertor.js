@@ -1,7 +1,9 @@
 import moment from "moment";
+import { mwToKw } from "./priceFormats";
 export default function chartDataConvertor(priceData) {
  return priceData.map(data => ({
     ...data,
-    hour: moment.unix(data.timestamp).format("hh"),
+    price: mwToKw(data.price),
+    hour: moment.unix(data.timestamp).format("HH"),
 }));
 }
