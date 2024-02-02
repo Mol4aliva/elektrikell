@@ -2,8 +2,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import SearchForm from "./SearchForm";
 
 
-
-function LeftSideBar({ show, handleClose, ...formProps }) {
+function LeftSideBar({show, handleClose, ...formProps}) {
 
     return (
         <Offcanvas show={show} onHide={handleClose}>
@@ -16,4 +15,5 @@ function LeftSideBar({ show, handleClose, ...formProps }) {
         </Offcanvas>
     );
 }
+
 export default LeftSideBar;

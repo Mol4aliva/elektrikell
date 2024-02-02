@@ -3,13 +3,14 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
 import logo from './logo.png';
-function Logo({ handleOpenSideBar }) {
+
+function Logo({handleOpenSideBar}) {
 
 
-    return(
+    return (
         <Row className="align-items-start mt-3">
             <Col>
-                <img src={logo} alt="Logo" />
+                <img src={logo} alt="Logo"/>
                 <h2 className="text-primary d-inline-block">elektrikell.ee</h2>
                 <Button className="ms-3" variant="primary" onClick={handleOpenSideBar}>
                     Search
