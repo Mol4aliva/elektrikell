@@ -3,18 +3,11 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Intervals from "./Intervals";
 import Countdown from 'react-countdown';
+import { addHourToCurrentTSML} from "../utils/dates";
 
 
 function TargetLow(props) {
-    const oneHourFromNow = Date.now() + 3600000;
-
-    const renderer = ({hours, minutes, seconds}) => {
-        return (
-            <div className="display-3 fw-bold">
-                {hours.toString().padStart(2, '0')}:{minutes.toString().padStart(2, '0')}:{seconds.toString().padStart(2, '0')}
-            </div>
-        );
-    };
+    const countDownDate = addHourToCurrentTSML();
 
     return (
         <>
@@ -32,9 +25,10 @@ function TargetLow(props) {
             <Row>
                 <Col>
                     <Countdown
-                        date={oneHourFromNow}
-                        renderer={renderer}
+                        className="display-3 fw-bold"
+                        date={countDownDate}
                     >
+
                     </Countdown>
                 </Col>
             </Row>
