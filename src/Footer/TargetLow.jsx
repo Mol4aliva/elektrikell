@@ -7,7 +7,7 @@ import { addHourToCurrentTSML} from "../utils/dates";
 
 
 function TargetLow(props) {
-    const countDownDate = addHourToCurrentTSML();
+    const countDownDate = addHourToCurrentTSML().toDate();
 
     return (
         <>
