@@ -2,19 +2,20 @@ import {useEffect, useState} from "react";
 import lodash from "lodash";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import {LineChart, XAxis, YAxis, Line, Dot, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceArea} from 'recharts';
+import {LineChart, XAxis, YAxis, Dot, ResponsiveContainer, ReferenceLine, CartesianGrid, ReferenceArea, Line, Tooltip} from 'recharts';
 import {getPriceData} from "../services/apiService";
 import {chartDataConvertor} from "../utils";
 import {currentTimeStamp} from '../utils/dates';
 import {getLowPriceInterval} from "../utils/buildIntervals";
+import CustomTooltip from "./CustomTooltip";
 
 function Body({from, until, activeHour}) {
     const [priceData, setPriceData] = useState([]);
     const [x1, setX1] = useState(0);
     const [x2, setX2] = useState(0);
+    const [averageCost, setAverageCost] = useState(0);
     const renderDot = (line) => {
         const {
-
             payload: {timestamp},
         } = line;
 
@@ -44,6 +45,12 @@ function Body({from, until, activeHour}) {
 
     }, [priceData, activeHour]);
 
+    useEffect(() => {
+        const totalPrices = priceData.map(entry => parseFloat(entry.price)); // Преобразование строк в числа
+        const averageCost = lodash.mean(totalPrices);
+        setAverageCost(averageCost);
+    }, [priceData]);
+
     return (
         <Row>
             <Col>
@@ -52,15 +59,26 @@ function Body({from, until, activeHour}) {
                         <CartesianGrid strokeDasharray="3 3"/>
                         <XAxis dataKey="hour" interval={1}/>
                         <YAxis/>
-                        <Tooltip/>
+                        <Tooltip content={<CustomTooltip />}/>
                         <Line
-                            type="step"
+                            type="stepAfter"
                             dataKey="price"
                             strokeWidth={3}
                             stroke="#8884d8"
                             dot={renderDot}
+                            isAnimationActive={false}
                         />
-                        <ReferenceArea x1={x1} x2={x2} stroke="blue" strokeOpacity={0.3}/>
+
+                        <ReferenceArea
+                            x1={x1}
+                            x2={x2}
+                            stroke="blue"
+                            strokeOpacity={0.3}
+                        />
+                        <ReferenceLine
+                            y={averageCost}
+                            stroke="red"
+                        />
                     </LineChart>
                 </ResponsiveContainer>
             </Col>
