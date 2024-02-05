@@ -11,7 +11,6 @@ function SearchForm({handleClose, from, until, setFrom, setUntil}) {
 
         setFrom(convertToRequestFormat(from));
         setUntil(convertToRequestFormat(until));
-
         handleClose();
     };
     return (
