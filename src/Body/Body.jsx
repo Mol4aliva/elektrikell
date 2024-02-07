@@ -1,39 +1,59 @@
-import {useEffect, useState} from "react";
+import {useEffect, useState, useMemo, useCallback} from "react";
 import lodash from "lodash";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import {LineChart, XAxis, YAxis, Dot, ResponsiveContainer, ReferenceLine, CartesianGrid, ReferenceArea, Line, Tooltip} from 'recharts';
+import {
+    LineChart,
+    XAxis,
+    YAxis,
+    Dot,
+    ResponsiveContainer,
+    ReferenceLine,
+    CartesianGrid,
+    ReferenceArea,
+    Line,
+    Tooltip
+} from 'recharts';
 import {getPriceData} from "../services/apiService";
 import {chartDataConvertor} from "../utils";
 import {currentTimeStamp} from '../utils/dates';
 import {getLowPriceInterval} from "../utils/buildIntervals";
 import CustomTooltip from "./CustomTooltip";
-import { getAveragePrice } from "../utils/maths";
+import {getAveragePrice} from "../utils/maths";
+import {ERROR_MESSAGE} from "./constants";
 
-function Body({from, until, activeHour}) {
+
+function Body({from, until, activeHour, setErrorMessage, setBestUntil}) {
     const [priceData, setPriceData] = useState([]);
     const [x1, setX1] = useState(0);
     const [x2, setX2] = useState(0);
-    const renderDot = (line) => {
+
+    const averagePrice = useMemo(() => {
+        return getAveragePrice(priceData);
+    }, [priceData]);
+
+    const renderDot = useCallback((line) => {
         const {
             payload: {timestamp},
         } = line;
-
 
         return timestamp === currentTimeStamp() ? (
             <Dot {...line}>
                 <div></div>
             </Dot>
         ) : null;
-    };
+    }, []);
 
     useEffect(() => {
-        getPriceData(from, until).then(({data}) => {
-            const priceData = chartDataConvertor(data.ee);
+        getPriceData(from, until)
+            .then(({data, success}) => {
+                const priceData = chartDataConvertor(data.ee);
 
-            setPriceData(priceData);
-        });
-    }, [from, until]);
+                if (!success) throw new Error();
+                setPriceData(priceData);
+            })
+            .catch(() => setErrorMessage(ERROR_MESSAGE));
+    }, [from, until, setErrorMessage]);
 
     useEffect(() => {
         const lowPriceIntervals = getLowPriceInterval(priceData, activeHour);
@@ -41,8 +61,10 @@ function Body({from, until, activeHour}) {
         if (lowPriceIntervals.length) {
             setX1(lowPriceIntervals[0].position);
             setX2(lodash.last(lowPriceIntervals).position);
+            setBestUntil(lowPriceIntervals[0].timestamp);
         }
-    }, [priceData, activeHour]);
+    }, [priceData, activeHour, setBestUntil]);
+
 
     return (
         <Row>
@@ -52,7 +74,7 @@ function Body({from, until, activeHour}) {
                         <CartesianGrid strokeDasharray="3 3"/>
                         <XAxis dataKey="hour" interval={1}/>
                         <YAxis/>
-                        <Tooltip content={<CustomTooltip />}/>
+                        <Tooltip content={<CustomTooltip/>}/>
                         <Line
                             type="stepAfter"
                             dataKey="price"
@@ -69,7 +91,7 @@ function Body({from, until, activeHour}) {
                             strokeOpacity={0.3}
                         />
                         <ReferenceLine
-                            y={getAveragePrice(priceData)}
+                            y={averagePrice}
                             label="Avrage"
                             stroke="grey"
                             strokeDasharray="3 3"
