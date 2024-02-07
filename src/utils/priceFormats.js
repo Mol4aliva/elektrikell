@@ -3,7 +3,7 @@ import { VAT, COUNTRY_CODES } from "./constants";
 
 // export const mwToKw = (price) => lodash.round(parseFloat(price) / 10, 2).toFixed(2);
 export const mwToKw = (price) => {
-    const result = lodash.round(parseFloat(price) / 10, 2).toFixed(2);
+    const result = +lodash.round(parseFloat(price) / 10, 2).toFixed(2);
     return result;
 };
 // export const addTax = (amount, countryCode) =>
