@@ -8,12 +8,12 @@ import {chartDataConvertor} from "../utils";
 import {currentTimeStamp} from '../utils/dates';
 import {getLowPriceInterval} from "../utils/buildIntervals";
 import CustomTooltip from "./CustomTooltip";
+import { getAveragePrice } from "../utils/maths";
 
 function Body({from, until, activeHour}) {
     const [priceData, setPriceData] = useState([]);
     const [x1, setX1] = useState(0);
     const [x2, setX2] = useState(0);
-    const [averageCost, setAverageCost] = useState(0);
     const renderDot = (line) => {
         const {
             payload: {timestamp},
@@ -42,14 +42,7 @@ function Body({from, until, activeHour}) {
             setX1(lowPriceIntervals[0].position);
             setX2(lodash.last(lowPriceIntervals).position);
         }
-
     }, [priceData, activeHour]);
-
-    useEffect(() => {
-        const totalPrices = priceData.map(entry => parseFloat(entry.price)); // Преобразование строк в числа
-        const averageCost = lodash.mean(totalPrices);
-        setAverageCost(averageCost);
-    }, [priceData]);
 
     return (
         <Row>
@@ -76,8 +69,10 @@ function Body({from, until, activeHour}) {
                             strokeOpacity={0.3}
                         />
                         <ReferenceLine
-                            y={averageCost}
-                            stroke="red"
+                            y={getAveragePrice(priceData)}
+                            label="Avrage"
+                            stroke="grey"
+                            strokeDasharray="3 3"
                         />
                     </LineChart>
                 </ResponsiveContainer>
