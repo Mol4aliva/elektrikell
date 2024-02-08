@@ -1,21 +1,20 @@
 import {useEffect} from "react";
 import Spinner from 'react-bootstrap/Spinner';
-import {getPriceData, getCurrentPrice} from "../services/apiService";
+
 
 function LoadingSpinner({setLoading}) {
+
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true);
 
             try {
-                await getPriceData();
-                await getCurrentPrice();
-            } catch (error) {
-                console.error(error);
-            } finally {
                 setTimeout(() => {
                     setLoading(false);
                 }, 1000);
+
+            } catch (error) {
+                console.error(error);
             }
         };
 
