@@ -23,10 +23,12 @@ import {getAveragePrice} from "../utils/maths";
 import {ERROR_MESSAGE} from "./constants";
 
 
-function Body({from, until, activeHour, setErrorMessage, setBestUntil}) {
+
+function Body({from, until, activeHour, setErrorMessage, setBestUntil, setIsLoading}) {
     const [priceData, setPriceData] = useState([]);
     const [x1, setX1] = useState(0);
     const [x2, setX2] = useState(0);
+
 
     const averagePrice = useMemo(() => {
         return getAveragePrice(priceData);
@@ -51,9 +53,13 @@ function Body({from, until, activeHour, setErrorMessage, setBestUntil}) {
 
                 if (!success) throw new Error();
                 setPriceData(priceData);
+
+
             })
-            .catch(() => setErrorMessage(ERROR_MESSAGE));
-    }, [from, until, setErrorMessage]);
+            .catch(() => setErrorMessage(ERROR_MESSAGE))
+            .finally(() => setIsLoading(false))
+        }, [from, until, setErrorMessage, setIsLoading]);
+
 
     useEffect(() => {
         const lowPriceIntervals = getLowPriceInterval(priceData, activeHour);
@@ -64,7 +70,6 @@ function Body({from, until, activeHour, setErrorMessage, setBestUntil}) {
             setBestUntil(lowPriceIntervals[0].timestamp);
         }
     }, [priceData, activeHour, setBestUntil]);
-
 
     return (
         <Row>

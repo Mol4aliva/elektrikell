@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a67bc781-ca52-4d88-95cd-4d5b56be3b93" name="Changes" comment="edited_2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Body/Body.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Body/Body.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Spinner/LoadingSpinner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Spinner/LoadingSpinner.jsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="home_work_6" />
+                    <option name="lastUsedInstant" value="1707400156" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1707332481" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="lesson_7" />
+                    <option name="lastUsedInstant" value="1707324225" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="home_work_5_2" />
+                    <option name="lastUsedInstant" value="1707323155" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="lesson_6" />
+                    <option name="lastUsedInstant" value="1706891577" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2bdI4HJGhJZ7XqrRhs0dAC7Dtgx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "home__work__6",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.2.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Ira\kursq\react\elektrikell\src\utils" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a67bc781-ca52-4d88-95cd-4d5b56be3b93" name="Changes" comment="" />
+      <created>1706538335272</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706538335272</updated>
+      <workItem from="1706538336362" duration="56670000" />
+      <workItem from="1706888454500" duration="32303000" />
+      <workItem from="1707319345630" duration="39908000" />
+    </task>
+    <task id="LOCAL-00001" summary="leftsidebar, form, submit event">
+      <option name="closed" value="true" />
+      <created>1706550173641</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706550173641</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fetch price data elering">
+      <option name="closed" value="true" />
+      <created>1706555145362</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706555145362</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ApiCurrent, useEffect, InfoComponent">
+      <option name="closed" value="true" />
+      <created>1706622872367</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706622872367</updated>
+    </task>
+    <task id="LOCAL-00004" summary="CurrentPrice, add tax">
+      <option name="closed" value="true" />
+      <created>1706720135317</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706720135317</updated>
+    </task>
+    <task id="LOCAL-00005" summary="from, until, search by dates, dot chart">
+      <option name="closed" value="true" />
+      <created>1706791383149</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706791383149</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Countdown for one hour, renderer, +formatted">
+      <option name="closed" value="true" />
+      <created>1706821384237</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706821384237</updated>
+    </task>
+    <task id="LOCAL-00007" summary="react-countdown">
+      <option name="closed" value="true" />
+      <created>1706891506604</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1706891506604</updated>
+    </task>
+    <task id="LOCAL-00008" summary="price interval calculations">
+      <option name="closed" value="true" />
+      <created>1706900897186</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1706900897186</updated>
+    </task>
+    <task id="LOCAL-00009" summary="bug fixes">
+      <option name="closed" value="true" />
+      <created>1707323047187</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1707323047187</updated>
+    </task>
+    <task id="LOCAL-00010" summary="get Average Price reference line">
+      <option name="closed" value="true" />
+      <created>1707324150074</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1707324150074</updated>
+    </task>
+    <task id="LOCAL-00011" summary="useMemo,UseCallback, errorModal, countdown">
+      <option name="closed" value="true" />
+      <created>1707332439413</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1707332439413</updated>
+    </task>
+    <task id="LOCAL-00012" summary="LoadingSpinner component">
+      <option name="closed" value="true" />
+      <created>1707400215773</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1707400215773</updated>
+    </task>
+    <task id="LOCAL-00013" summary="edited">
+      <option name="closed" value="true" />
+      <created>1707403898970</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1707403898970</updated>
+    </task>
+    <task id="LOCAL-00014" summary="edited_2">
+      <option name="closed" value="true" />
+      <created>1707482903337</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1707482903337</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="leftsidebar, form, submit event" />
+    <MESSAGE value="fetch price data elering" />
+    <MESSAGE value="ApiCurrent, useEffect, InfoComponent" />
+    <MESSAGE value="CurrentPrice, add tax" />
+    <MESSAGE value="from, until, search by dates, dot chart" />
+    <MESSAGE value="Countdown for one hour, renderer, +formatted" />
+    <MESSAGE value="react-countdown" />
+    <MESSAGE value="price interval calculations" />
+    <MESSAGE value="bug fixes" />
+    <MESSAGE value="get Average Price reference line" />
+    <MESSAGE value="useMemo,UseCallback, errorModal, countdown" />
+    <MESSAGE value="LoadingSpinner component" />
+    <MESSAGE value="edited" />
+    <MESSAGE value="edited_2" />
+    <option name="LAST_COMMIT_MESSAGE" value="edited_2" />
+  </component>
+</project>

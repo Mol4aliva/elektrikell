@@ -7,6 +7,7 @@ import Footer from "./Footer";
 import LeftSideBar from "./LeftSideBar";
 import {getDefaultFrom, getDefaultUntil} from "./utils/dates";
 import ErrorModal from "./ErrorModal";
+import LoadingSpinner from "./Spinner/LoadingSpinner";
 
 function App() {
     const [activePrice, setActivePrice] = useState(DEFAULT_ACTIVE_BUTTON);
@@ -16,15 +17,26 @@ function App() {
     const [until, setUntil] = useState(getDefaultUntil());
     const [errorMessage, setErrorMessage] = useState(null);
     const [bestUntil, setBestUntil] = useState(0);
+    const [isLoading, setIsLoading] = useState(true);
+
     const handleCloseSideBar = () => setShowSideBar(false);
     const handleOpenSideBar = () => setShowSideBar(true);
+
+
+
     return (
         <Container>
+
+            {isLoading && <LoadingSpinner
+
+             />}
+
             <Head
                 activePrice={activePrice}
                 setActivePrice={setActivePrice}
                 handleOpenSideBar={handleOpenSideBar}
                 setErrorMessage={setErrorMessage}
+
             />
             <Body
                 activeHour={activeHour}
@@ -32,6 +44,7 @@ function App() {
                 until={until}
                 setErrorMessage={setErrorMessage}
                 setBestUntil={setBestUntil}
+                setIsLoading={setIsLoading}
             />
             <Footer
                 activePrice={activePrice}
@@ -52,6 +65,7 @@ function App() {
                 handleClose={() => setErrorMessage(null)}
                 errorMessage={errorMessage}
             />
+
         </Container>
     );
 }
