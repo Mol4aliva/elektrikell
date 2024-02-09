@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a67bc781-ca52-4d88-95cd-4d5b56be3b93" name="Changes" comment="edited">
+    <list default="true" id="a67bc781-ca52-4d88-95cd-4d5b56be3b93" name="Changes" comment="edited_2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Body/Body.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Body/Body.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Head/Info.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Head/Info.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Spinner/LoadingSpinner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Spinner/LoadingSpinner.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +101,7 @@
       <updated>1706538335272</updated>
       <workItem from="1706538336362" duration="56670000" />
       <workItem from="1706888454500" duration="32303000" />
-      <workItem from="1707319345630" duration="36929000" />
+      <workItem from="1707319345630" duration="39908000" />
     </task>
     <task id="LOCAL-00001" summary="leftsidebar, form, submit event">
       <option name="closed" value="true" />
@@ -208,7 +207,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707403898970</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="edited_2">
+      <option name="closed" value="true" />
+      <created>1707482903337</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1707482903337</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +246,7 @@
     <MESSAGE value="useMemo,UseCallback, errorModal, countdown" />
     <MESSAGE value="LoadingSpinner component" />
     <MESSAGE value="edited" />
-    <option name="LAST_COMMIT_MESSAGE" value="edited" />
+    <MESSAGE value="edited_2" />
+    <option name="LAST_COMMIT_MESSAGE" value="edited_2" />
   </component>
 </project>

@@ -17,7 +17,7 @@ function App() {
     const [until, setUntil] = useState(getDefaultUntil());
     const [errorMessage, setErrorMessage] = useState(null);
     const [bestUntil, setBestUntil] = useState(0);
-    const [loading, setLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
 
     const handleCloseSideBar = () => setShowSideBar(false);
     const handleOpenSideBar = () => setShowSideBar(true);
@@ -27,12 +27,10 @@ function App() {
     return (
         <Container>
 
-            {loading && <LoadingSpinner
-                 setLoading={setLoading}
+            {isLoading && <LoadingSpinner
+
              />}
 
-            {!loading && (
-                <>
             <Head
                 activePrice={activePrice}
                 setActivePrice={setActivePrice}
@@ -46,6 +44,7 @@ function App() {
                 until={until}
                 setErrorMessage={setErrorMessage}
                 setBestUntil={setBestUntil}
+                setIsLoading={setIsLoading}
             />
             <Footer
                 activePrice={activePrice}
@@ -66,8 +65,7 @@ function App() {
                 handleClose={() => setErrorMessage(null)}
                 errorMessage={errorMessage}
             />
-                </>
-            )}
+
         </Container>
     );
 }
