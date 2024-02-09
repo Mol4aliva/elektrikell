@@ -18,22 +18,27 @@ function App() {
     const [errorMessage, setErrorMessage] = useState(null);
     const [bestUntil, setBestUntil] = useState(0);
     const [loading, setLoading] = useState(true);
+
     const handleCloseSideBar = () => setShowSideBar(false);
     const handleOpenSideBar = () => setShowSideBar(true);
+
+
+
     return (
         <Container>
-            {loading ? (
-                <LoadingSpinner
-                    setLoading={setLoading}
-                    setErrorMessage={setErrorMessage}
-                />
-            ) : (
+
+            {loading && <LoadingSpinner
+                 setLoading={setLoading}
+             />}
+
+            {!loading && (
                 <>
             <Head
                 activePrice={activePrice}
                 setActivePrice={setActivePrice}
                 handleOpenSideBar={handleOpenSideBar}
                 setErrorMessage={setErrorMessage}
+
             />
             <Body
                 activeHour={activeHour}

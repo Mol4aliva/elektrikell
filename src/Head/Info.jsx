@@ -27,6 +27,7 @@ function Info({activePrice, setActivePrice, setErrorMessage}) {
             } catch {
                 setErrorMessage(ERROR_MESSAGE);
             }
+
         })();
     }, [setErrorMessage]);
 
