@@ -4,11 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a67bc781-ca52-4d88-95cd-4d5b56be3b93" name="Changes" comment="edited_2">
+    <list default="true" id="a67bc781-ca52-4d88-95cd-4d5b56be3b93" name="Changes" comment="edited_3">
+      <change afterPath="$PROJECT_DIR$/src/About/About.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/About/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Navigation.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ElectricPrice.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Body/Body.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Body/Body.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Spinner/LoadingSpinner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Spinner/LoadingSpinner.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/buildIntervals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/buildIntervals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +41,10 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="lesson_8" />
+                    <option name="lastUsedInstant" value="1707495642" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="home_work_6" />
                     <option name="lastUsedInstant" value="1707400156" />
                   </RecentBranch>
@@ -47,10 +59,6 @@
                   <RecentBranch>
                     <option name="branchName" value="home_work_5_2" />
                     <option name="lastUsedInstant" value="1707323155" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="lesson_6" />
-                    <option name="lastUsedInstant" value="1706891577" />
                   </RecentBranch>
                 </list>
               </option>
@@ -76,7 +84,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "home__work__6",
+    "git-widget-placeholder": "lesson__8",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -247,6 +255,7 @@
     <MESSAGE value="LoadingSpinner component" />
     <MESSAGE value="edited" />
     <MESSAGE value="edited_2" />
-    <option name="LAST_COMMIT_MESSAGE" value="edited_2" />
+    <MESSAGE value="edited_3" />
+    <option name="LAST_COMMIT_MESSAGE" value="edited_3" />
   </component>
 </project>
