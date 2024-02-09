@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import './App.scss'
 import Container from 'react-bootstrap/Container';
 import Body from "./Body";
@@ -8,8 +8,11 @@ import LeftSideBar from "./LeftSideBar";
 import {getDefaultFrom, getDefaultUntil} from "./utils/dates";
 import ErrorModal from "./ErrorModal";
 import LoadingSpinner from "./Spinner/LoadingSpinner";
+import { useParams } from "react-router-dom";
 
-function App() {
+function ElectricPrice() {
+    const params = useParams();
+
     const [activePrice, setActivePrice] = useState(DEFAULT_ACTIVE_BUTTON);
     const [activeHour, setActiveHour] = useState(1);
     const [showSideBar, setShowSideBar] = useState(false);
@@ -22,15 +25,17 @@ function App() {
     const handleCloseSideBar = () => setShowSideBar(false);
     const handleOpenSideBar = () => setShowSideBar(true);
 
-
+    useEffect(() => {
+        if(params.hours) setActiveHour(+params.hours);
+    },[params]);
 
     return (
         <Container>
 
-            {isLoading && <LoadingSpinner
+            {isLoading && <LoadingSpinner/>}
 
-             />}
-
+            {!isLoading && (
+                <>
             <Head
                 activePrice={activePrice}
                 setActivePrice={setActivePrice}
@@ -65,9 +70,10 @@ function App() {
                 handleClose={() => setErrorMessage(null)}
                 errorMessage={errorMessage}
             />
-
+                </>
+            )}
         </Container>
     );
 }
 
-export default App;
+export default ElectricPrice;
