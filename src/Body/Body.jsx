@@ -21,14 +21,17 @@ import {getLowPriceInterval} from "../utils/buildIntervals";
 import CustomTooltip from "./CustomTooltip";
 import {getAveragePrice} from "../utils/maths";
 import {ERROR_MESSAGE} from "./constants";
+import {useSelector} from "react-redux";
 
 
-
-function Body({from, until, activeHour, setErrorMessage, setBestUntil, setIsLoading}) {
+function Body({setErrorMessage, setBestUntil, setIsLoading}) {
     const [priceData, setPriceData] = useState([]);
     const [x1, setX1] = useState(0);
     const [x2, setX2] = useState(0);
 
+    const from = useSelector((state) => state.main.from);
+    const until = useSelector((state) => state.main.until);
+    const activeHour = useSelector((state) => state.main.activeHour);
 
     const averagePrice = useMemo(() => {
         return getAveragePrice(priceData);

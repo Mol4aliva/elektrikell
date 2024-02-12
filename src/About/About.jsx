@@ -11,7 +11,6 @@ function About() {
             <Navigation/>
             <BodyAbout/>
             <FooterAbout/>
-
         </Container>
     );
 
