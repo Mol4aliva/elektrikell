@@ -1,0 +1,44 @@
+.height {
+  min-height: 67vh;
+}
+
+.btn-feedback {
+  background-color: #ffffff !important;
+  color: #0164ab;
+  width: 19rem;
+  height: 50px;
+  font-size: 20px;
+  border: 1px solid #0164ab;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #dff2f8 !important;
+    color: #0164ab !important;
+  }
+
+  &:active,
+  &.active {
+    color: #0164ab !important;
+  }
+}
+
+.custom-short-input {
+  background-color: white !important;
+  width: 300px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.17);
+}
+
+.color {
+  background-image: url('img-laptop.jpeg');
+  background-color: #86b7fe0f;
+
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: right bottom;
+}
+
+@media (max-width: 770px) {
+  .color {
+    background-image: none;
+  }
+}

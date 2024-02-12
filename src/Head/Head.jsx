@@ -1,4 +1,4 @@
-import Logo from './Logo';
+
 import Info from './Info';
 import Row from 'react-bootstrap/Row';
 
@@ -7,10 +7,13 @@ function Head(props) {
     return (
         <>
             <Row>
-                <Logo handleOpenSideBar={handleOpenSideBar}/>
+
             </Row>
             <Row>
-                <Info {...restProps}/>
+                <Info
+                    handleOpenSideBar={handleOpenSideBar}
+                    {...restProps}
+                />
             </Row>
         </>
     );
