@@ -1,25 +1,9 @@
-import {useState} from 'react';
+import { useFormHandling } from "../utils/formUtils";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 const FeedbackForm = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: ''
-    });
-    const handleChange = (e) => {
-        const {name, value} = e.target;
-        setFormData({
-            ...formData,
-            [name]: value
-        });
-    };
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(formData);
-
-    };
+    const { formData, handleChange, handleSubmit } = useFormHandling();
     return (
         <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicName">
