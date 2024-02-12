@@ -57,7 +57,7 @@ function Body({from, until, activeHour, setErrorMessage, setBestUntil, setIsLoad
 
             })
             .catch(() => setErrorMessage(ERROR_MESSAGE))
-            .finally(() => setIsLoading(false))
+            .finally(() => setIsLoading(false));
         }, [from, until, setErrorMessage, setIsLoading]);
 
 

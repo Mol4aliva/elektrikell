@@ -12,7 +12,7 @@ import {mwToKw, addTax} from "../utils/priceFormats";
 import {ERROR_MESSAGE} from "./constants";
 
 
-function Info({activePrice, setActivePrice, setErrorMessage}) {
+function Info({activePrice, setActivePrice, setErrorMessage, handleOpenSideBar}) {
     const [currentPrice, setCurrentPrice] = useState(0);
 
 
@@ -36,6 +36,12 @@ function Info({activePrice, setActivePrice, setErrorMessage}) {
             <Col>
                 <div>The current price of electricity is</div>
                 <Badge bg={BADGES[0].name}>{BADGES[0].id}</Badge>
+
+            </Col>
+            <Col>
+                <Button className="ms-3" variant="primary" onClick={handleOpenSideBar}>
+                    Search
+                </Button>
             </Col>
             <Col className="text-center">
                 <ButtonGroup>

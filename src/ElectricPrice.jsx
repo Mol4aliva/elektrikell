@@ -9,6 +9,7 @@ import {getDefaultFrom, getDefaultUntil} from "./utils/dates";
 import ErrorModal from "./ErrorModal";
 import LoadingSpinner from "./Spinner/LoadingSpinner";
 import { useParams } from "react-router-dom";
+import Navigation from "./Navigation/Navigation";
 
 function ElectricPrice() {
     const params = useParams();
@@ -32,46 +33,52 @@ function ElectricPrice() {
     return (
         <Container>
 
-            {isLoading && <LoadingSpinner/>}
+    <div
+    className={isLoading ? 'd-none' : ''}
+    >
+    <Navigation
 
-            {!isLoading && (
-                <>
-            <Head
-                activePrice={activePrice}
-                setActivePrice={setActivePrice}
-                handleOpenSideBar={handleOpenSideBar}
-                setErrorMessage={setErrorMessage}
+    />
+    <Head
+        activePrice={activePrice}
+        setActivePrice={setActivePrice}
+        handleOpenSideBar={handleOpenSideBar}
+        setErrorMessage={setErrorMessage}
 
-            />
-            <Body
-                activeHour={activeHour}
-                from={from}
-                until={until}
-                setErrorMessage={setErrorMessage}
-                setBestUntil={setBestUntil}
-                setIsLoading={setIsLoading}
-            />
-            <Footer
-                activePrice={activePrice}
-                activeHour={activeHour}
-                setActiveHour={setActiveHour}
-                bestUntil={bestUntil}
-            />
-            <LeftSideBar
-                show={showSideBar}
-                handleClose={handleCloseSideBar}
-                from={from}
-                until={until}
-                setFrom={setFrom}
-                setUntil={setUntil}
-            />
-            <ErrorModal
-                show={!!errorMessage}
-                handleClose={() => setErrorMessage(null)}
-                errorMessage={errorMessage}
-            />
-                </>
-            )}
+    />
+    <Body
+
+        activeHour={activeHour}
+        from={from}
+        until={until}
+        setErrorMessage={setErrorMessage}
+        setBestUntil={setBestUntil}
+        setIsLoading={setIsLoading}
+
+    />
+    <Footer
+        activePrice={activePrice}
+        activeHour={activeHour}
+        setActiveHour={setActiveHour}
+        bestUntil={bestUntil}
+    />
+    <LeftSideBar
+        show={showSideBar}
+        handleClose={handleCloseSideBar}
+        from={from}
+        until={until}
+        setFrom={setFrom}
+        setUntil={setUntil}
+    />
+    <ErrorModal
+        show={!!errorMessage}
+        handleClose={() => setErrorMessage(null)}
+        errorMessage={errorMessage}
+    />
+    </div>
+
+
+    {isLoading && <LoadingSpinner/>}
         </Container>
     );
 }

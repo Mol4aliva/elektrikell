@@ -1,17 +1,20 @@
-import { useLocation, useParams, useNavigate } from "react-router-dom";
-import {useEffect} from "react";
+import Container from "react-bootstrap/Container";
+import Navigation from "../Navigation/Navigation";
+import BodyAbout from "./BodyAbout";
+import FooterAbout from "./FooterAbout";
 
 function About() {
-    const location = useLocation();
-    const params = useParams();
-    const navigete = useNavigate();
 
-    useEffect(()=> {
-        if(params.id === '999') navigete('/');
-    },[params, navigete]);
+    return (
+        <Container className="color">
 
+            <Navigation/>
+            <BodyAbout/>
+            <FooterAbout/>
 
-    return <>About component</>;
+        </Container>
+    );
+
 }
 
 export default About;

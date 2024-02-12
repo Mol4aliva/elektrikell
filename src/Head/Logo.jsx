@@ -1,10 +1,10 @@
 import Row from "react-bootstrap/Row";
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
+
 
 import logo from './logo.png';
 
-function Logo({handleOpenSideBar}) {
+function Logo() {
 
 
     return (
@@ -12,9 +12,6 @@ function Logo({handleOpenSideBar}) {
             <Col>
                 <img src={logo} alt="Logo"/>
                 <h2 className="text-primary d-inline-block">elektrikell.ee</h2>
-                <Button className="ms-3" variant="primary" onClick={handleOpenSideBar}>
-                    Search
-                </Button>
             </Col>
         </Row>
     );
