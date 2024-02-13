@@ -10,14 +10,15 @@ import {PRICE_BUTTONS, BADGES} from "./constants";
 import {getCurrentPrice} from "../services/apiService";
 import {mwToKw, addTax} from "../utils/priceFormats";
 import {ERROR_MESSAGE} from "./constants";
-import { useSelector, useDispatch } from "react-redux";
-import { setActivePrice } from "../services/stateService";
+import {useSelector, useDispatch} from "react-redux";
+import {setActivePrice, setErrorMessage, setShowSideBar} from "../services/stateService";
 
-function Info({setErrorMessage, handleOpenSideBar}) {
+function Info() {
     const dispatch = useDispatch();
 
     const [currentPrice, setCurrentPrice] = useState(0);
     const activePrice = useSelector((state) => state.main.activePrice);
+    const handleOpenSideBar = () => dispatch(setShowSideBar(true));
 
     useEffect(() => {
 
@@ -28,11 +29,11 @@ function Info({setErrorMessage, handleOpenSideBar}) {
                 if (!success) throw new Error();
                 setCurrentPrice(addTax(mwToKw(data[0].price), "EE"));
             } catch {
-                setErrorMessage(ERROR_MESSAGE);
+                dispatch(setErrorMessage(ERROR_MESSAGE));
             }
 
         })();
-    }, [setErrorMessage]);
+    }, [dispatch]);
 
     return (
         <Row>

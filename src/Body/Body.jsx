@@ -21,16 +21,18 @@ import {getLowPriceInterval} from "../utils/buildIntervals";
 import CustomTooltip from "./CustomTooltip";
 import {getAveragePrice} from "../utils/maths";
 import {ERROR_MESSAGE} from "./constants";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {setErrorMessage, setBestUntil, setIsLoading} from "../services/stateService";
 
-
-function Body({setErrorMessage, setBestUntil, setIsLoading}) {
+function Body() {
     const [priceData, setPriceData] = useState([]);
     const [x1, setX1] = useState(0);
     const [x2, setX2] = useState(0);
 
-    const from = useSelector((state) => state.main.from);
-    const until = useSelector((state) => state.main.until);
+    const dispatch = useDispatch();
+
+    const from = useSelector((state) => state.date.from);
+    const until = useSelector((state) => state.date.until);
     const activeHour = useSelector((state) => state.main.activeHour);
 
     const averagePrice = useMemo(() => {
@@ -59,9 +61,9 @@ function Body({setErrorMessage, setBestUntil, setIsLoading}) {
 
 
             })
-            .catch(() => setErrorMessage(ERROR_MESSAGE))
-            .finally(() => setIsLoading(false));
-        }, [from, until, setErrorMessage, setIsLoading]);
+            .catch(() => dispatch(setErrorMessage(ERROR_MESSAGE)))
+            .finally(() => dispatch(setIsLoading(false)));
+    }, [from, until, dispatch]);
 
 
     useEffect(() => {
@@ -70,10 +72,9 @@ function Body({setErrorMessage, setBestUntil, setIsLoading}) {
         if (lowPriceIntervals.length) {
             setX1(lowPriceIntervals[0].position);
             setX2(lodash.last(lowPriceIntervals).position + 1);
-            setBestUntil(lowPriceIntervals[0].timestamp);
+            dispatch(setBestUntil(lowPriceIntervals[0].timestamp));
         }
-    }, [priceData, activeHour, setBestUntil]);
-
+    }, [priceData, activeHour, dispatch]);
     return (
         <Row>
             <Col>

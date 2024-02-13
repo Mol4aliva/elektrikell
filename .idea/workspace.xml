@@ -4,21 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a67bc781-ca52-4d88-95cd-4d5b56be3b93" name="Changes" comment="Component About, FeedbackForm, about/gamma, about/me, about/feedback">
-      <change afterPath="$PROJECT_DIR$/src/services/stateService.js" afterDir="false" />
+    <list default="true" id="a67bc781-ca52-4d88-95cd-4d5b56be3b93" name="Changes" comment="redust state">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/About/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/About/About.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Body/Body.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Body/Body.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ElectricPrice.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ElectricPrice.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ErrorModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ErrorModal.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Footer/Footer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Footer/Intervals.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Footer/Intervals.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Footer/TargetLow.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Footer/TargetLow.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Head/Head.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Head/Head.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Head/Info.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Head/Info.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LeftSideBar/LeftSideBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeftSideBar/LeftSideBar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LeftSideBar/SearchForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeftSideBar/SearchForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/stateService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/stateService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +41,10 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="home_work_8" />
+                    <option name="lastUsedInstant" value="1707820394" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="lesson_9" />
                     <option name="lastUsedInstant" value="1707754233" />
                   </RecentBranch>
@@ -57,10 +59,6 @@
                   <RecentBranch>
                     <option name="branchName" value="home_work_6" />
                     <option name="lastUsedInstant" value="1707400156" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1707332481" />
                   </RecentBranch>
                 </list>
               </option>
@@ -86,13 +84,13 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "lesson__9",
+    "git-widget-placeholder": "home__work__8",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.2.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm2023.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -116,6 +114,7 @@
       <workItem from="1706538336362" duration="56670000" />
       <workItem from="1706888454500" duration="32303000" />
       <workItem from="1707319345630" duration="39908000" />
+      <workItem from="1707824656943" duration="9642000" />
     </task>
     <task id="LOCAL-00001" summary="leftsidebar, form, submit event">
       <option name="closed" value="true" />
@@ -245,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707737685664</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="redust state">
+      <option name="closed" value="true" />
+      <created>1707764665540</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1707764665540</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +286,7 @@
     <MESSAGE value="edited_2" />
     <MESSAGE value="edited_3" />
     <MESSAGE value="Component About, FeedbackForm, about/gamma, about/me, about/feedback" />
-    <option name="LAST_COMMIT_MESSAGE" value="Component About, FeedbackForm, about/gamma, about/me, about/feedback" />
+    <MESSAGE value="redust state" />
+    <option name="LAST_COMMIT_MESSAGE" value="redust state" />
   </component>
 </project>

@@ -1,4 +1,3 @@
-
 import Info from './Info';
 import Row from 'react-bootstrap/Row';
 
@@ -7,7 +6,6 @@ function Head(props) {
     return (
         <>
             <Row>
-
             </Row>
             <Row>
                 <Info
