@@ -3,11 +3,11 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Intervals from "./Intervals";
 import Countdown from 'react-countdown';
+import {useSelector} from "react-redux";
 
 
 function TargetLow(props) {
-    const {bestUntil} = props;
-
+    const bestUntil = useSelector((state) => state.main.bestUntil);
 
     return (
         <>

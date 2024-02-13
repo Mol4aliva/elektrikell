@@ -1,13 +1,13 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import {convertToInputFormat, convertToRequestFormat} from "../utils/dates";
-import  { useSelector, useDispatch } from "react-redux";
-import { setFrom,setUntil } from "../services/stateService";
+import {useSelector, useDispatch} from "react-redux";
+import {setFrom, setUntil} from "../services/stateService";
 
 function SearchForm({handleClose}) {
     const dispatch = useDispatch();
-    const from = useSelector((state) => state.main.from);
-    const until = useSelector((state) => state.main.until);
+    const from = useSelector((state) => state.date.from);
+    const until = useSelector((state) => state.date.until);
     const handleSubmit = (event) => {
         event.preventDefault();
 
@@ -16,6 +16,7 @@ function SearchForm({handleClose}) {
 
         dispatch(setFrom(convertToRequestFormat(from)));
         dispatch(setUntil(convertToRequestFormat(until)));
+
         handleClose();
     };
     return (
@@ -44,5 +45,6 @@ function SearchForm({handleClose}) {
         </Form>
     );
 }
+
 
 export default SearchForm;
