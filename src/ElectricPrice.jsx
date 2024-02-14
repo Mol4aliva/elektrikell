@@ -11,7 +11,7 @@ import {useParams} from "react-router-dom";
 import Navigation from "./Navigation/Navigation";
 import {useDispatch, useSelector} from "react-redux";
 import {setActiveHour} from "./services/stateService";
-
+import ElectricPriceProvider from "./contexts/ElectricPriceContext";
 function ElectricPrice() {
     const params = useParams();
     const dispatch = useDispatch();
@@ -23,19 +23,19 @@ function ElectricPrice() {
     }, [params, dispatch]);
 
     return (
-        <Container>
-
-            <div className={isLoading ? 'd-none' : ''}>
-                <Navigation/>
-                <Head/>
-                <Body/>
-                <Footer/>
-                <LeftSideBar/>
-                <ErrorModal/>
-            </div>
-
-            {isLoading && <LoadingSpinner/>}
-        </Container>
+        <ElectricPriceProvider>
+            <Container>
+                <div className={isLoading ? 'd-none' : ''}>
+                    <Navigation/>
+                    <Head/>
+                    <Body/>
+                    <Footer/>
+                    <LeftSideBar/>
+                    <ErrorModal/>
+                </div>
+                {isLoading && <LoadingSpinner/>}
+            </Container>
+        </ElectricPriceProvider>
     );
 }
 

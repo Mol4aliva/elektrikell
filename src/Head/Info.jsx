@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useEffect, useState, useContext} from "react";
 
 import Col from 'react-bootstrap/Col';
 import Row from "react-bootstrap/Row";
@@ -12,7 +12,7 @@ import {mwToKw, addTax} from "../utils/priceFormats";
 import {ERROR_MESSAGE} from "./constants";
 import {useSelector, useDispatch} from "react-redux";
 import {setActivePrice, setErrorMessage, setShowSideBar} from "../services/stateService";
-
+import {ElectricPriceContext} from "../contexts/ElectricPriceContext";
 function Info() {
     const dispatch = useDispatch();
 
@@ -20,6 +20,8 @@ function Info() {
     const activePrice = useSelector((state) => state.main.activePrice);
     const handleOpenSideBar = () => dispatch(setShowSideBar(true));
 
+    const { values } = useContext(ElectricPriceContext);
+    console.log(values.averagePrice);
     useEffect(() => {
 
         (async () => {

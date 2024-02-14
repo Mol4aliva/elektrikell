@@ -1,17 +1,14 @@
 import Info from './Info';
 import Row from 'react-bootstrap/Row';
 
-function Head(props) {
-    const {handleOpenSideBar, ...restProps} = props;
+function Head() {
+
     return (
         <>
             <Row>
             </Row>
             <Row>
-                <Info
-                    handleOpenSideBar={handleOpenSideBar}
-                    {...restProps}
-                />
+                <Info/>
             </Row>
         </>
     );

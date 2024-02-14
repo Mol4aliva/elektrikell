@@ -4,7 +4,7 @@ import {useSelector} from "react-redux";
 import {setShowSideBar} from "../services/stateService";
 import {useDispatch} from "react-redux";
 
-function LeftSideBar({...formProps}) {
+function LeftSideBar() {
     const dispatch = useDispatch();
     const show = useSelector((state) => state.main.showSideBar);
     const handleClose = () => dispatch(setShowSideBar(false));
@@ -15,7 +15,7 @@ function LeftSideBar({...formProps}) {
                 <Offcanvas.Title>Search by dates</Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-                <SearchForm {...formProps} handleClose={handleClose}/>
+                <SearchForm handleClose={handleClose}/>
             </Offcanvas.Body>
         </Offcanvas>
     );
