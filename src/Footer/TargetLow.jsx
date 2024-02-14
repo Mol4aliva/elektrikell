@@ -6,7 +6,7 @@ import Countdown from 'react-countdown';
 import {useSelector} from "react-redux";
 
 
-function TargetLow(props) {
+function TargetLow() {
     const bestUntil = useSelector((state) => state.main.bestUntil);
 
     return (
@@ -19,7 +19,7 @@ function TargetLow(props) {
             </Row>
             <Row>
                 <Col className="mb-3">
-                    <Intervals {...props}/>
+                    <Intervals />
                 </Col>
             </Row>
             <Row>

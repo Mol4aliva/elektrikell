@@ -6,7 +6,6 @@ import React from "react";
 function App() {
     return (
         <>
-
             <Routes>
                 <Route path="/" element={<ElectricPrice/>}>
                     <Route path="lowprice/:hours" element={<ElectricPrice/>}/>

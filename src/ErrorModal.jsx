@@ -6,13 +6,11 @@ import { setErrorMessage } from "./services/stateService";
 
 function ErrorModal() {
     const errorMessage = useSelector((state) => state.main.errorMessage);
-    const show = !!errorMessage;
-
     const dispatch = useDispatch();
     const handleClose = () => dispatch(setErrorMessage(null));
 
     return (
-        <Modal show={show} onHide={handleClose}>
+        <Modal show={!!errorMessage} onHide={handleClose}>
             <Modal.Header closeButton>
                 <Modal.Title>Error</Modal.Title>
             </Modal.Header>

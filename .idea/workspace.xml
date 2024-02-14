@@ -5,18 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a67bc781-ca52-4d88-95cd-4d5b56be3b93" name="Changes" comment="redust state">
+      <change afterPath="$PROJECT_DIR$/src/contexts/ElectricPriceContext.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Body/Body.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Body/Body.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ElectricPrice.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ElectricPrice.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ErrorModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ErrorModal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Footer/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Footer/Intervals.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Footer/Intervals.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Footer/TargetLow.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Footer/TargetLow.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Head/Head.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Head/Head.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Head/Info.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Head/Info.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LeftSideBar/LeftSideBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeftSideBar/LeftSideBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeftSideBar/SearchForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeftSideBar/SearchForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/stateService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/stateService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +39,10 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="lesson_10" />
+                    <option name="lastUsedInstant" value="1707926694" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="home_work_8" />
                     <option name="lastUsedInstant" value="1707820394" />
                   </RecentBranch>
@@ -55,10 +57,6 @@
                   <RecentBranch>
                     <option name="branchName" value="lesson_8" />
                     <option name="lastUsedInstant" value="1707495642" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="home_work_6" />
-                    <option name="lastUsedInstant" value="1707400156" />
                   </RecentBranch>
                 </list>
               </option>
@@ -84,7 +82,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "home__work__8",
+    "git-widget-placeholder": "lesson__10",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",

@@ -1,4 +1,4 @@
-import {useEffect, useState, useMemo, useCallback} from "react";
+import {useEffect, useState, useCallback, useContext} from "react";
 import lodash from "lodash";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -23,21 +23,19 @@ import {getAveragePrice} from "../utils/maths";
 import {ERROR_MESSAGE} from "./constants";
 import {useDispatch, useSelector} from "react-redux";
 import {setErrorMessage, setBestUntil, setIsLoading} from "../services/stateService";
-
+import {ElectricPriceContext} from "../contexts/ElectricPriceContext";
 function Body() {
     const [priceData, setPriceData] = useState([]);
     const [x1, setX1] = useState(0);
     const [x2, setX2] = useState(0);
+
+    const { actions, values } = useContext(ElectricPriceContext);
 
     const dispatch = useDispatch();
 
     const from = useSelector((state) => state.date.from);
     const until = useSelector((state) => state.date.until);
     const activeHour = useSelector((state) => state.main.activeHour);
-
-    const averagePrice = useMemo(() => {
-        return getAveragePrice(priceData);
-    }, [priceData]);
 
     const renderDot = useCallback((line) => {
         const {
@@ -59,11 +57,12 @@ function Body() {
                 if (!success) throw new Error();
                 setPriceData(priceData);
 
+                actions.setAveragePrice(getAveragePrice(priceData));
 
             })
             .catch(() => dispatch(setErrorMessage(ERROR_MESSAGE)))
             .finally(() => dispatch(setIsLoading(false)));
-    }, [from, until, dispatch]);
+    }, [from, until, dispatch, actions]);
 
 
     useEffect(() => {
@@ -100,7 +99,7 @@ function Body() {
                             strokeOpacity={0.3}
                         />
                         <ReferenceLine
-                            y={averagePrice}
+                            y={values.averagePrice}
                             label="Avrage"
                             stroke="grey"
                             strokeDasharray="3 3"
