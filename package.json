@@ -2,6 +2,7 @@
   "name": "elektrikell",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mol4aliva.github.io/elektrikell",
   "dependencies": {
     "@reduxjs/toolkit": "^2.1.0",
     "bootstrap": "^5.3.2",
@@ -19,7 +20,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -40,6 +43,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "eslint": "8.56.0"
+    "eslint": "8.56.0",
+    "gh-pages": "^6.1.1"
   }
 }

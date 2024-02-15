@@ -1,9 +1,14 @@
 export const LOW = 'low';
+export const AVERAGE = 'average';
 export const HIGH = 'high';
 export const BADGES = [
     {
         name: 'success',
         id: LOW
+    },
+    {
+        name: 'warning',
+        id: AVERAGE
     },
     {
         name: 'danger',

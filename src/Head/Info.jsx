@@ -5,14 +5,15 @@ import Row from "react-bootstrap/Row";
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Badge from 'react-bootstrap/Badge';
-
-import {PRICE_BUTTONS, BADGES} from "./constants";
+import './style.scss';
+import {PRICE_BUTTONS, BADGES, LOW, HIGH, AVERAGE} from "./constants";
 import {getCurrentPrice} from "../services/apiService";
 import {mwToKw, addTax} from "../utils/priceFormats";
 import {ERROR_MESSAGE} from "./constants";
 import {useSelector, useDispatch} from "react-redux";
 import {setActivePrice, setErrorMessage, setShowSideBar} from "../services/stateService";
 import {ElectricPriceContext} from "../contexts/ElectricPriceContext";
+
 function Info() {
     const dispatch = useDispatch();
 
@@ -20,8 +21,18 @@ function Info() {
     const activePrice = useSelector((state) => state.main.activePrice);
     const handleOpenSideBar = () => dispatch(setShowSideBar(true));
 
-    const { values } = useContext(ElectricPriceContext);
-    console.log(values.averagePrice);
+    const {values} = useContext(ElectricPriceContext);
+    const {low, high} = values.averagePrice;
+
+    let priceStatus;
+
+    if (currentPrice < low) {
+        priceStatus = LOW;
+    } else if (currentPrice > high) {
+        priceStatus = HIGH;
+    } else {
+        priceStatus = AVERAGE;
+    }
     useEffect(() => {
 
         (async () => {
@@ -41,7 +52,7 @@ function Info() {
         <Row>
             <Col>
                 <div>The current price of electricity is</div>
-                <Badge bg={BADGES[0].name}>{BADGES[0].id}</Badge>
+                <Badge className="price-status" bg={BADGES.find(badge => badge.id === priceStatus).name}>{priceStatus}</Badge>
 
             </Col>
             <Col>
