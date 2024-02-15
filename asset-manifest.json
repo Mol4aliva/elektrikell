@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/elektrikell/static/css/main.354f4307.css",
-    "main.js": "/elektrikell/static/js/main.8abd2478.js",
+    "main.js": "/elektrikell/static/js/main.eeb95436.js",
     "static/media/img-laptop.jpeg": "/elektrikell/static/media/img-laptop.f72e8292e686cdba3b2c.jpeg",
     "index.html": "/elektrikell/index.html",
     "main.354f4307.css.map": "/elektrikell/static/css/main.354f4307.css.map",
-    "main.8abd2478.js.map": "/elektrikell/static/js/main.8abd2478.js.map"
+    "main.eeb95436.js.map": "/elektrikell/static/js/main.eeb95436.js.map"
   },
   "entrypoints": [
     "static/css/main.354f4307.css",
-    "static/js/main.8abd2478.js"
+    "static/js/main.eeb95436.js"
   ]
 }
