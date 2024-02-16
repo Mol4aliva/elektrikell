@@ -19,5 +19,5 @@ function ElectricPriceProvider({children}) {
         </ElectricPriceContext.Provider>
     );
 }
-export { ElectricPriceContext, ElectricPriceProvider };
+export { ElectricPriceContext };
 export default ElectricPriceProvider;
