@@ -24,12 +24,13 @@ import {ERROR_MESSAGE} from "./constants";
 import {useDispatch, useSelector} from "react-redux";
 import {setErrorMessage, setBestUntil, setIsLoading} from "../services/stateService";
 import {ElectricPriceContext} from "../contexts/ElectricPriceContext";
+
 function Body() {
     const [priceData, setPriceData] = useState([]);
     const [x1, setX1] = useState(0);
     const [x2, setX2] = useState(0);
 
-    const { actions, values } = useContext(ElectricPriceContext);
+    const {actions: {setAveragePrice}, values} = useContext(ElectricPriceContext);
 
     const dispatch = useDispatch();
 
@@ -57,12 +58,12 @@ function Body() {
                 if (!success) throw new Error();
                 setPriceData(priceData);
 
-                actions.setAveragePrice(getAveragePrice(priceData));
+                setAveragePrice(getAveragePrice(priceData));
 
             })
             .catch(() => dispatch(setErrorMessage(ERROR_MESSAGE)))
             .finally(() => dispatch(setIsLoading(false)));
-    }, [from, until, dispatch, actions]);
+    }, [from, until, dispatch, setAveragePrice]);
 
 
     useEffect(() => {

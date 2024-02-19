@@ -19,7 +19,7 @@ function Info() {
     const activePrice = useSelector((state) => state.main.activePrice);
     const handleOpenSideBar = () => dispatch(setShowSideBar(true));
 
-    const {values, actions} = useContext(ElectricPriceContext);
+    const {values, actions: {setCurrentPrice}} = useContext(ElectricPriceContext);
 
     useEffect(() => {
 
@@ -28,13 +28,13 @@ function Info() {
                 const {data, success} = await getCurrentPrice();
 
                 if (!success) throw new Error();
-                actions.setCurrentPrice(addTax(mwToKw(data[0].price), "EE"));
+                setCurrentPrice(addTax(mwToKw(data[0].price), "EE"));
             } catch {
                 dispatch(setErrorMessage(ERROR_MESSAGE));
             }
 
         })();
-    }, [dispatch, actions]);
+    }, [dispatch, setCurrentPrice]);
 
     return (
 
